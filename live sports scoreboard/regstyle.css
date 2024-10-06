@@ -1,0 +1,350 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center; /* Center items vertically */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    top: 0; /* Ensure header is at the top */
+    gap: 20px; /* Adds space between logo and nav */
+  }
+  
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    flex-grow: 1; /* Allow the logo to take up remaining space */
+    text-align: center; /* Center text within logo div */
+  }
+  
+  header nav {
+    display: flex; /* Display nav items in a row */
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Gowun Batang',cursive;
+    color: #384B70;
+    padding: 10px 20px; /* Add padding to create space inside the border */
+    border: 2px solid #9393ff; /* Square border around the links */
+    border-radius: 10px; /* Slightly rounded corners for a modern look */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  header nav ul li a:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #55679C; /* Change background color on hover */
+    border-color: #007BFF; /* Match border color with background color on hover */
+  }
+  
+  header h1 {
+    margin: 0; /* Remove default margin */
+  }
+  
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    margin-top: 100px; 
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.wrapper h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.input div {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+.input i {
+    margin-right: 10px;
+    color: #555;
+}
+.input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+}
+.input input:focus {
+    background-color: #e6f7ff;
+}
+.option {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.option select {
+    width: 100%; 
+    padding: 12px;
+    border: none;
+    outline: none;
+    background-color: #fff; /* White background */
+    border-radius: 4px; /* Rounded corners for the select box */
+    appearance: none; /* Removes default arrow for custom styling */
+    font-size: 16px; /* Larger font size for better readability */
+    color: #333; /* Text color */
+    cursor: pointer;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Slight inner shadow */
+}
+
+.option select:focus {
+    background-color: #e6f7ff; /* Highlighted color on focus */
+}
+
+.option::after {
+    content: "\f078"; /* FontAwesome icon for down arrow */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+    pointer-events: none;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+}
+
+.btn {
+    flex: 1; /* Make both buttons the same size */
+    padding: 14px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:focus {
+    outline: 2px solid #0056b3;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+.name-group {
+    display: flex;
+    justify-content: space-between;
+}
+.name-group .form-group {
+    width: 48%;
+}
+.gender-btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gender-btn-group .gender-options {
+    display: flex;
+    align-items: center;
+}
+.gender-options label {
+    margin-right: 15px;
+    margin-left: 5px;
+}
+.gender-options input[type="radio"] {
+    margin-left: 0;
+}
+.login {
+    text-align: center;
+    margin-top: 20px;
+}
+.login a {
+    text-decoration: none;
+    color: #007bff;
+}
+.login a:hover {
+    color: #0056b3;
+}
+/* For tablets (less than 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack the logo and nav items vertically */
+        padding: 10px;
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Add space between the logo and navigation */
+        text-align: center; /* Center the logo */
+    }
+
+    header nav ul {
+        justify-content: center; /* Center the nav items */
+    }
+
+    .wrapper {
+        width: 90%; /* Reduce width on smaller screens */
+        margin-top: 120px; /* Adjust form position */
+        padding: 40px;
+    }
+}
+
+/* For mobile phones (less than 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px; /* Add space between nav links */
+    }
+
+    .wrapper {
+        width: 95%; /* Further reduce the width for smaller screens */
+        padding: 30px;
+    }
+
+    .input div {
+        flex-direction: column; /* Stack input elements vertically */
+    }
+
+    .btn-group {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add space between the buttons */
+    }
+}
+/* Media queries for responsiveness */
+
+/* For tablets (less than 768px) */
+@media (max-width: 768px) {
+    /* Adjust header for tablets */
+    header {
+        padding: 15px;
+        flex-direction: column; /* Stack logo and nav items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 10px; /* Space between logo and nav */
+    }
+
+    header .logo {
+        font-size: 20px; /* Adjust logo size */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center nav items */
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px; /* Space between nav links */
+    }
+
+    .wrapper {
+        width: 90%; /* Adjust width of wrapper */
+        margin-top: 120px; /* Add margin-top to avoid overlap with header */
+        padding: 30px; /* Adjust padding */
+    }
+
+    .input div {
+        flex-direction: column; /* Stack input elements and icons vertically */
+    }
+
+    .btn-group {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Space between buttons */
+    }
+}
+
+/* For mobile phones (less than 480px) */
+@media (max-width: 480px) {
+    /* Adjust header for mobile phones */
+    header {
+        padding: 10px;
+        flex-direction: column; /* Stack logo and nav items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    header .logo {
+        font-size: 18px; /* Further adjust logo size */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center nav items */
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 8px; /* Space between nav links */
+    }
+
+    .wrapper {
+        width: 95%; /* Adjust width of wrapper */
+        margin-top: 100px; /* Adjust margin-top */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .input div {
+        flex-direction: column; /* Stack input elements and icons vertically */
+    }
+
+    .btn-group {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 8px; /* Space between buttons */
+    }
+
+    .input i {
+        font-size: 14px; /* Adjust icon size */
+    }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Dashboard</title>
+    <link rel="stylesheet" href="./dash.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <button class="toggle-button" onclick="toggleSidebar()">☰</button>
+            <div>Live Sports Scoreboard</div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="profile">
+                <img src="https://c8.alamy.com/zooms/9/9d75d3fcb40441a39876692eed1f0c21/tc2fpe.jpg"
+                    alt="Profile Picture">
+                <h2>Max Kembli</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="fav-section">
+                <h3>Favourite League</h3>
+                <ul>
+                    <li><a href="#">Premier League</a></li>
+                    <li><a href="#">I-League</a></li>
+                    <li><a href="#">Laliga</a></li>
+                </ul>
+                <h3>Favourite Club</h3>
+                <ul>
+                    <li><a href="#">TSG 1899 Hoffenheim</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="hero-card">
+                <div class="match-info">
+                    <h2>WHU</h2>
+                    <h2>West Ham United</h2>
+                    <img src="https://via.placeholder.com/150" alt="Team Image">
+                    <h2>Lev</h2>
+                    <h2>Bayer Leverkusen</h2>
+                </div>
+            </div>
+
+            <!-- Sports History Container -->
+            <div class="sports-history-container">
+                <h3>Sports History</h3>
+
+                <div class="match-card">
+                    <div class="team">
+                        <img src="https://via.placeholder.com/50x50?text=ENGW" alt="England Women Logo"
+                            class="team-logo">
+                        <div class="team-info">
+                            <h4>England Women</h4>
+                            <p>118/7 (20 overs)</p>
+                        </div>
+                    </div>
+                    <div class="team">
+                        <img src="https://via.placeholder.com/50x50?text=BANW" alt="Bangladesh Women Logo"
+                            class="team-logo">
+                        <div class="team-info">
+                            <h4>Bangladesh Women</h4>
+                            <p>97/7 (20 overs)</p>
+                        </div>
+                    </div>
+                    <div class="match-result">
+                        <p>England Women Won by 21 runs</p>
+                    </div>
+                </div>
+
+                <div class="match-card">
+                    <div class="team">
+                        <img src="https://via.placeholder.com/50x50?text=SLW" alt="Sri Lanka Women Logo"
+                            class="team-logo">
+                        <div class="team-info">
+                            <h4>Sri Lanka Women</h4>
+                            <p>93/7 (20 overs)</p>
+                        </div>
+                    </div>
+                    <div class="team">
+                        <img src="https://via.placeholder.com/50x50?text=BANW" alt="Bangladesh Women Logo"
+                            class="team-logo">
+                        <div class="team-info">
+                            <h4>Bangladesh Women</h4>
+                            <p>94/4 (20 overs)</p>
+                        </div>
+                    </div>
+                    <div class="match-result">
+                        <p>Sri Lanka Women Won by 1 run</p>
+                    </div>
+                </div>
+
+                <div class="match-card">
+                    <div class="team">
+                        <img src="https://via.placeholder.com/50x50?text=Treviso" alt="Treviso Logo" class="team-logo">
+                        <div class="team-info">
+                            <h4>Treviso</h4>
+                            <p>71</p>
+                        </div>
+                    </div>
+                    <div class="team">
+                        <img src="https://via.placeholder.com/50x50?text=Trapani" alt="Trapani Logo" class="team-logo">
+                        <div class="team-info">
+                            <h4>Trapani</h4>
+                            <p>87</p>
+                        </div>
+                    </div>
+                    <div class="match-result">
+                        <p>Trapani Won by 16 points</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Matches Container -->
+            <div class="upcoming-matches-wrapper">
+                <h3>Upcoming Matches</h3>
+                <div class="upcoming-matches-container">
+                    <div class="match-card">
+                        <div class="team">
+                            <img src="https://via.placeholder.com/50x50?text=IND" alt="India Logo" class="team-logo">
+                            <div class="team-info">
+                                <h4>India</h4>
+                                <p>vs Australia</p>
+                            </div>
+                        </div>
+                        <div class="match-time">
+                            <p>5:00 PM</p>
+                        </div>
+                        <button class="remove-button">Remove</button>
+                    </div>
+
+                    <div class="match-card">
+                        <div class="team">
+                            <img src="https://via.placeholder.com/50x50?text=ENG" alt="England Logo" class="team-logo">
+                            <div class="team-info">
+                                <h4>England</h4>
+                                <p>vs South Africa</p>
+                            </div>
+                        </div>
+                        <div class="match-time">
+                            <p>7:00 PM</p>
+                        </div>
+                        <button class="remove-button">Remove</button>
+                    </div>
+
+                    <div class="match-card">
+                        <div class="team">
+                            <img src="https://via.placeholder.com/50x50?text=NZ" alt="New Zealand Logo"
+                                class="team-logo">
+                            <div class="team-info">
+                                <h4>New Zealand</h4>
+                                <p>vs Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="match-time">
+                            <p>8:30 PM</p>
+                        </div>
+                        <button class="remove-button">Remove</button>
+                    </div>
+
+                    <div class="match-card">
+                        <div class="team">
+                            <img src="https://via.placeholder.com/50x50?text=SA" alt="South Africa Logo"
+                                class="team-logo">
+                            <div class="team-info">
+                                <h4>South Africa</h4>
+                                <p>vs West Indies</p>
+                            </div>
+                        </div>
+                        <div class="match-time">
+                            <p>6:00 PM</p>
+                        </div>
+                        <button class="remove-button">Remove</button>
+                    </div>
+
+                    <div class="match-card">
+                        <div class="team">
+                            <img src="https://via.placeholder.com/50x50?text=WI" alt="West Indies Logo"
+                                class="team-logo">
+                            <div class="team-info">
+                                <h4>West Indies</h4>
+                                <p>vs Sri Lanka</p>
+                            </div>
+                        </div>
+                        <div class="match-time">
+                            <p>9:00 PM</p>
+                        </div>
+                        <button class="remove-button">Remove</button>
+                    </div>
+                </div>
+            </div>
+
+            <script src="./dash.js"></script>
+        </main>
+    </div>
+</body>
+
+</html>

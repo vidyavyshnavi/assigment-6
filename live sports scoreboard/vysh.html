@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard with Toggle Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    /* Container for the dashboard */
+    .dashboard-container {
+      display: flex;
+      height: 100vh;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #333;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      transition: width 0.3s ease;
+    }
+    /* Sidebar hidden */
+    .sidebar.hidden {
+      width: 0;
+      overflow: hidden;
+    }
+    .sidebar a {
+      padding: 15px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      transition: background-color 0.3s;
+    }
+    .sidebar a:hover {
+      background-color: #444;
+    }
+    /* Main content area */
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+    /* Toggle button */
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    /* Sections */
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toggle Button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <!-- Dashboard Container -->
+  <div class="dashboard-container">
+    
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <a href="#" onclick="showSection('watchlist')">Watchlist</a>
+      <a href="#" onclick="showSection('history')">History</a>
+      <a href="#" onclick="showSection('profile')">Profile</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Watchlist Section -->
+      <div id="watchlist" class="section active">
+        <h2>Watchlist</h2>
+        <p>Your saved items will appear here.</p>
+      </div>
+
+      <!-- History Section -->
+      <div id="history" class="section">
+        <h2>History</h2>
+        <p>Your action history will appear here.</p>
+      </div>
+
+      <!-- Profile Section -->
+      <div id="profile" class="section">
+        <h2>Profile</h2>
+        <p>Update your profile details here.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to toggle the sidebar visibility
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('hidden');
+    }
+
+    // Function to show a particular section
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

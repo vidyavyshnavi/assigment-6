@@ -1,0 +1,304 @@
+/* General reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun Batang:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; /* Disable scrolling */
+    background-image: url('./Sports day.jpeg'); /* Replace with your background image URL */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-attachment: fixed; /* Keeps the background fixed */
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and nav items */
+  align-items: center; /* Center items vertically */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  top: 0; /* Ensure header is at the top */
+  gap: 20px; /* Adds space between logo and nav */
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  flex-grow: 1; /* Allow the logo to take up remaining space */
+  text-align: center; /* Center text within logo div */
+}
+
+header nav {
+  display: flex; /* Display nav items in a row */
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Gowun Batang',cursive;
+  color: #384B70;
+  padding: 10px 20px; /* Add padding to create space inside the border */
+  border: 2px solid #9393ff; /* Square border around the links */
+  border-radius: 10px; /* Slightly rounded corners for a modern look */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+header nav ul li a:hover {
+  color: #fff; /* Change text color on hover */
+  background-color: #55679C; /* Change background color on hover */
+  border-color: #007BFF; /* Match border color with background color on hover */
+}
+
+header h1 {
+  margin: 0; /* Remove default margin */
+}
+
+/* Centered container */
+.container {
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DancingScript',cursive;
+    background-color: rgba(255, 255, 255, 0.8); /* White box with slight transparency */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    min-height: 600px; /* Ensures the container maintains a vertical shape */
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.input div {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.input i {
+    margin-right: 10px;
+    color: #555;
+}
+
+.input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+}
+
+.input input:focus {
+    background-color: #e6f7ff;
+}
+
+.remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember label {
+    display: flex;
+    align-items: center;
+}
+
+.remember a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: 2px solid #0056b3;
+}
+
+.register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.register a:hover {
+    color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto; /* Enable scrolling on small devices */
+        background-size: contain; /* Adjust background size to fit the viewport */
+    }
+
+    header {
+        padding: 10px;
+        flex-direction: column; /* Stack logo and nav vertically */
+        align-items: center;
+    }
+
+    header .logo {
+        font-size: 20px; /* Adjust logo size for smaller screens */
+        margin-bottom: 10px; /* Space between logo and nav */
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 16px; /* Adjust font size of navigation links */
+        padding: 8px 16px; /* Reduce padding */
+    }
+
+    .container {
+        width: 90%; /* Reduce the width of the centered container */
+        left: 50%; /* Adjust the position */
+        top: 50%; /* Adjust the top position */
+        max-width: 300px; /* Reduce maximum width */
+        min-height: auto; /* Allow height to adjust based on content */
+    }
+
+    .content h1 {
+        font-size: 28px; /* Reduce the size of the heading */
+    }
+
+    .content p {
+        font-size: 16px; /* Reduce the size of the paragraph text */
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 18px; /* Further reduce the size of the logo text */
+    }
+
+    header nav ul li a {
+        font-size: 14px; /* Further adjust the font size of navigation links */
+        padding: 6px 12px; /* Further reduce padding */
+    }
+
+    .container {
+        max-width: 260px; /* Further reduce the max width on smaller screens */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .content h1 {
+        font-size: 24px; /* Further reduce heading size */
+    }
+
+    .content p {
+        font-size: 14px; /* Further reduce paragraph text size */
+    }
+}
+/* Media Queries for Responsive Background Image */
+@media (max-width: 768px) {
+  body {
+      background-size: contain; /* Adjust background size to fit the viewport */
+      background-attachment: scroll; /* Allow scrolling for background */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      background-size: 100% 100%; /* Ensure background image covers the entire viewport */
+      background-attachment: scroll; /* Allow scrolling for background */
+  }
+}
+/* Media Queries for Tablet Mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+      background-size: cover; /* Ensure background image covers the entire viewport */
+      background-attachment: scroll; /* Allow scrolling for background */
+  }
+}
